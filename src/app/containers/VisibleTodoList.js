@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleTodo, broadcastToggle } from '../actions/todos'
+import { broadcastToggle } from '../actions/todos'
 import TodoList from '../components/TodoList'
 import { VisibilityFilters } from '../actions/todos'
 
