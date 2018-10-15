@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions/todos'
+import { addTodo, broadcastTodo } from '../actions/todos'
 
 const AddTodo = ({ dispatch }) => {
     let input
@@ -14,7 +14,8 @@ const AddTodo = ({ dispatch }) => {
                     if (!input.value.trim()) {
                         return
                     }
-                    dispatch(addTodo(input.value))
+                    //dispatch(addTodo(Math.random(), input.value))
+                    dispatch(broadcastTodo(Date.now()+Math.random(), input.value, false))
                     input.value = ''
                 }}
             >

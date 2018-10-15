@@ -51,8 +51,13 @@ module.exports = {
                 use: {
                     loader: 'html-loader',
                 }
-            }
+            },
         ]
+    },
+    node: {
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     },
     plugins: [
         new CleanWebpackPlugin(['dist/myApp/assets/css', 'dist/myApp/assets/js']),
